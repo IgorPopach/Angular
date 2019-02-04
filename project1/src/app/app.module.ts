@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HeadComponent } from './head/head.component';
 import { MainComponent } from './main/main.component';
 import { MainListComponent } from './main/list/main.list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeadComponent, MainComponent, MainListComponent
+    AppComponent, HeadComponent, MainComponent, MainListComponent, FooterComponent
   ],
   imports: [
     BrowserModule, FormsModule

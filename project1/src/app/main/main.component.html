@@ -1,4 +1,32 @@
 <div class="container main-bgcolor">
     <p>Main!!!!!</p>
     <app-main-list></app-main-list>
+    <button [disabled]="!button"
+        [class]="className"
+        (click)="start()"
+    >Start</button>
+    <span>Rocket is {{RocketState}}</span>
+    <input type="text"
+        class="form-control"
+        (input)="restart($event)"
+    >
+    <input type="text"
+        class="form-control"
+        (input)="takeText($event)"
+    >
+    <button
+        [class]="className"
+        (click)="show()"
+    >Show input</button>
+    <span>{{RocketName}}</span>
+    <span>{{ShowText}}</span>
+    <hr>
+    <input type="text"
+        [(ngModel)]="ngModel"
+    >
+    <button
+        [class]="className"
+        (click)="showModel(ngModel)"
+    >Show input</button>
+    <p>{{model}}</p>
 </div>
