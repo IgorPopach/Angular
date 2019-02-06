@@ -1,4 +1,4 @@
-<div class="container main-bgcolor">
+<div class="container" [ngStyle]="{ backgroundColor: getTime() }">
     <p>Main!!!!!</p>
     <app-main-list></app-main-list>
     <button [disabled]="!button"
@@ -6,6 +6,29 @@
         (click)="start()"
     >Start</button>
     <span>Rocket is {{RocketState}}</span>
+    <p *ngIf="rocketStatus === 'succes'">
+        Rocket Status {{rocketStatus}}
+    </p>
+    <p *ngIf="btnPressed; else btnElse">
+            Directive if works
+    </p>
+    <ng-template #btnElse>
+        <p>
+                Directive else works
+        </p>
+    </ng-template>
+    <p [ngStyle]="{ backgroundColor: getColor() }">
+        {{rocketStatus}}
+    </p>
+    <p [ngClass]="{ succes: rocketStatus === 'succes' }">
+        {{rocketStatus}}
+    </p>
+    <p *ngFor="let Person of persons">
+        {{Person}}
+    </p>
+    <p *ngFor="let Person of persons; let index = index">
+        {{index}} = {{Person}}
+    </p>
     <input type="text"
         class="form-control"
         (input)="restart($event)"
@@ -29,4 +52,7 @@
         (click)="showModel(ngModel)"
     >Show input</button>
     <p>{{model}}</p>
+    <hr>
+    
+    <app-form></app-form>
 </div>

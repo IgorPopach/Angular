@@ -15,12 +15,19 @@ export class MainComponent {
   InputText = '';
   ShowText = '';
   model = 'S';
+  rocketStatus = Math.random() > 0.5 ? 'succes' : 'fail';
+  btnPressed = false;
+  persons = ['Jack', 'Bill', 'Bob'];
+  date = new Date();
 
   start() {
     this.RocketState = 'launch';
     this.button = false;
+    this.btnPressed = !this.btnPressed;
   }
-
+  getColor() {
+    return this.rocketStatus === 'succes' ? 'green' : 'red';
+  }
   constructor() {
     setTimeout( () => {
       this.button = true;
@@ -41,6 +48,11 @@ export class MainComponent {
 
   showModel(ngModel) {
     this.model = ngModel;
+  }
+
+  getTime() {
+    const hours = this.date.getHours();
+    return (hours >= 7 && hours <= 18) ? 'yellow' : 'black';
   }
 
 }

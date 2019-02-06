@@ -1,3 +1,17 @@
 .main-bgcolor {
-    background-color: green;
+    background-color: rgb(173, 182, 173);
+}
+
+.succes {
+    font-size: 20px;
+    color: blue;
+    text-align: center;
+    background-color: rgb(245, 255, 112);
+}
+
+.fail {
+    font-size: 20px;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    background-color: rgb(112, 255, 255);
 }

@@ -7,10 +7,11 @@ import { HeadComponent } from './head/head.component';
 import { MainComponent } from './main/main.component';
 import { MainListComponent } from './main/list/main.list.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
-    AppComponent, HeadComponent, MainComponent, MainListComponent, FooterComponent
+    AppComponent, HeadComponent, MainComponent, MainListComponent, FooterComponent, FormComponent
   ],
   imports: [
     BrowserModule, FormsModule
