@@ -52,7 +52,7 @@ export class MainComponent {
 
   getTime() {
     const hours = this.date.getHours();
-    return (hours >= 7 && hours <= 18) ? 'yellow' : 'black';
+    return (hours >= 7 && hours <= 18) ? 'yellow' : 'rgb(39, 53, 133)';
   }
 
 }

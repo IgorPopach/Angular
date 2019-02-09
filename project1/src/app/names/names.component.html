@@ -1,0 +1,18 @@
+<div>
+  <h2>Names component</h2>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="{{ name }}"
+    (input)="takeName($event)"
+    [ngStyle]="{ color: getColor(name) }"
+  />
+  <button class="btn btn-dark" (click)="saveName()">Save name</button>
+  <button class="btn btn-dark" (click)="showNames()">{{btnName}}</button>
+  <h3 *ngIf="isTongleOn === true">Names list</h3>
+  <ul class="name-list">
+    <li *ngFor="let Name of storeNames" [ngStyle]="{ backgroundColor: getColor(Name) }">
+      {{ Name }}
+    </li>
+  </ul>
+</div>
