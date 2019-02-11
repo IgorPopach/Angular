@@ -1,0 +1,9 @@
+<div>
+  <input type="text" class="form-control" [(ngModel)]="modelTitle">
+  <input type="text" class="form-control" [(ngModel)]="modelPost">
+  <input type="text" class="form-control" [(ngModel)]="modelAuthor">
+  <button class="btn btn-warning" (click)="Add(modelTitle, modelPost, modelAuthor)">Add</button>
+</div>
+<p *ngIf="PostArray !== null">
+  <app-block-item *ngFor="let item of PostArray" [post]="item"></app-block-item>
+</p>
