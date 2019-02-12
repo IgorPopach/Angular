@@ -1,0 +1,11 @@
+<div>
+  <input type="text" class="form-control" [(ngModel)]="modelTitle" />
+  <input type="text" class="form-control" [(ngModel)]="modelPost" />
+  <input type="text" class="form-control" [(ngModel)]="modelAuthor" />
+  <button
+    class="btn btn-warning"
+    (click)="Add(modelTitle, modelPost, modelAuthor)"
+  >
+    Add
+  </button>
+</div>

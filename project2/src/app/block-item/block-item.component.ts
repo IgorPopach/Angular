@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { post } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-block-item',
