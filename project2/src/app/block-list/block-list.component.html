@@ -1,4 +1,5 @@
 <app-blog-input (PostArray) = "displayPostArray($event)"></app-blog-input>
+<app-add-post (OnAddPost) = "updateList($event)"></app-add-post>
 <p *ngIf="reversPostArray !== null">
   <app-block-item *ngFor="let item of reversPostArray" [post]="item"></app-block-item>
 </p>

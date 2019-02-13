@@ -1,10 +1,10 @@
-<div>
-  <input type="text" class="form-control" [(ngModel)]="modelTitle" />
-  <input type="text" class="form-control" [(ngModel)]="modelPost" />
-  <input type="text" class="form-control" [(ngModel)]="modelAuthor" />
+<div class="input-block-style">
+  <input type="text" class="form-control" [(ngModel)]="Title" />
+  <input type="text" class="form-control" [(ngModel)]="Post" />
+  <input type="text" class="form-control" [(ngModel)]="Author" />
   <button
     class="btn btn-warning"
-    (click)="Add(modelTitle, modelPost, modelAuthor)"
+    (click)="Add()"
   >
     Add
   </button>
