@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
-  Persons: [] = [];
+  Persons: [{name: string, pass: string}] = [{name: 'test', pass: 'test'}];
   show = (personProfile: {name: string, pass: string}) => {
     this.Persons.push(personProfile);
-    console.log(this.Persons);
   }
 
   ngOnInit() {

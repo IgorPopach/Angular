@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-login-list',
@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-list.component.css']
 })
 export class LoginListComponent implements OnInit {
-
-  constructor() { }
 
   ngOnInit() {
   }

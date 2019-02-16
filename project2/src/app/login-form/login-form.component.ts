@@ -6,7 +6,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-
   name = '';
   pass = '';
   @Output() OnTakeInputs = new EventEmitter<{ name: string, pass: string }>();

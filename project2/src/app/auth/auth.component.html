@@ -1,4 +1,4 @@
 <div>
   <app-login-form (OnTakeInputs)="show($event)"></app-login-form>
-  <app-login-list *ngFor="let item of Persons"></app-login-list>
+  <app-login-list *ngFor="let item of Persons" [Persons]="persons"></app-login-list>
 </div>
