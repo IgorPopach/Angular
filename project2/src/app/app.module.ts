@@ -10,9 +10,10 @@ import { BlockItemComponent } from './block-item/block-item.component';
 import { BlogInputComponent } from './blog-input/blog-input.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AuthComponent } from './auth/auth.component';
-import { LoginFormComponent } from './login-form/login-form.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 import { LoginListComponent } from './login-list/login-list.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +24,10 @@ import { ProfileComponent } from './profile/profile.component';
     BlogInputComponent,
     AddPostComponent,
     AuthComponent,
-    LoginFormComponent,
+    RegisterFormComponent,
     LoginListComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,

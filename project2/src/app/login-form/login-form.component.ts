@@ -8,14 +8,12 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class LoginFormComponent implements OnInit {
   name = '';
   pass = '';
-  @Output() OnTakeInputs = new EventEmitter<{ name: string, pass: string }>();
+  @Output() OnLoginInputs = new EventEmitter<{ name: string; pass: string }>();
   submitHandler = () => {
-    this.OnTakeInputs.emit({ name: this.name, pass: this.pass });
+    this.OnLoginInputs.emit({ name: this.name, pass: this.pass });
     this.name = '';
     this.pass = '';
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
