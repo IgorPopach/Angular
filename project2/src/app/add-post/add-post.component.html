@@ -1,4 +1,5 @@
 <div class="input-block-style">
+  <h2>Example 1</h2>
   <input type="text" class="form-control input-style" [(ngModel)]="title" />
   <input type="text" class="form-control input-style" [(ngModel)]="post" />
   <input type="text" class="form-control input-style" [(ngModel)]="author" />
@@ -9,3 +10,15 @@
     Add
   </button>
 </div>
+<!-- <div class="input-block-style">
+    <h2>Example 2</h2>
+    <input type="text" #blogTitle placeholder="title" class="form-control input-style" />
+    <input type="text" #blogPostRef placeholder="post" class="form-control input-style" />
+    <input type="text" placeholder="author" class="form-control input-style"  />
+    <button
+      class="btn btn-info"
+      (click)="AddPost2(blogTitle)"
+    >
+      Add
+    </button>
+  </div> -->
