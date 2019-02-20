@@ -19,7 +19,7 @@ export class BlockListComponent {
       this.PostArray = [];
     }
     this.PostArray.push(FullPost);
-    this.store.setItem('postArray',JSON.stringify(this.PostArray));
+    this.store.setItem('postArray', JSON.stringify(this.PostArray));
     this.reversPostArray = [...this.PostArray].reverse();
   }
 
@@ -40,20 +40,20 @@ export class BlockListComponent {
     const checkedArr = [];
     for (let i = 0; i < checkboxArr.length; i++) {
       const checkboxElem = checkboxArr[i];
-      console.log('checkboxElem',checkboxElem)
+      console.log('checkboxElem', checkboxElem)
       if (checkboxElem.checked === true) {
         checkedArr.push(+checkboxElem.value);
       }
     }
-    console.log('checkedArr',checkedArr);
+    console.log('checkedArr', checkedArr);
     for (let i = 0; i < checkedArr.length; i++) {
       const filteredPostArray = this.PostArray.filter(post => {
         return post.id !== checkedArr[i]
       });
       this.PostArray = filteredPostArray;
-      console.log('this.PostArray',this.PostArray)
+      console.log('this.PostArray', this.PostArray)
     }
-    this.store.setItem('postArray',JSON.stringify(this.PostArray));
+    this.store.setItem('postArray', JSON.stringify(this.PostArray));
     this.reversPostArray = [...this.PostArray].reverse();
   }
 }

@@ -3,4 +3,16 @@
   <h1>Blogichok!</h1>
   <app-auth></app-auth>
   <app-block-list></app-block-list>
+  <h2 appDhover [hoverColor]="'white'" [defaultBg]="BgColor" >Hello world!</h2>
+  <p appDhover>appDhover works for paragraph too!!!</p>
+  <ul *ngFor="let item of arr" class="list-group">
+    <li (click)="onClick(item)" class="list-group-item">{{item}}</li>
+  </ul>
+  <div [ngSwitch]="active">
+    <p *ngSwitchCase="1">First</p>
+    <p *ngSwitchCase="2">Second</p>
+    <p *ngSwitchCase="3">Third</p>
+    <p *ngSwitchCase="4">Fourth</p>
+    <p *ngSwitchDefault>Something</p>
+  </div>
 </div>

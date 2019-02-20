@@ -14,6 +14,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
 import { LoginListComponent } from './login-list/login-list.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { DhoverDirective } from '../directives/dhover.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
     RegisterFormComponent,
     LoginListComponent,
     ProfileComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    DhoverDirective
   ],
   imports: [
     BrowserModule,

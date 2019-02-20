@@ -1,0 +1,9 @@
+.text {
+    color: white;
+    font-size: 50px;
+}
+
+.hover {
+    color: #b33737;
+    text-decoration: underline;
+}
