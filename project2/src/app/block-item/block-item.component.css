@@ -1,0 +1,19 @@
+ul {
+    cursor: pointer;
+}
+
+.checkStyle {
+    text-align: center;
+    background-color: rgb(184, 219, 253);
+    border-radius: 25px;
+    padding-top: 9%; 
+}
+
+.block-item-styles {
+    margin: 20px;
+    padding: 15px;
+    background-color: beige;
+    border: 1px solid rgb(156, 134, 134);
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px rgb(146, 140, 140);
+}

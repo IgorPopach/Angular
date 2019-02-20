@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, DoCheck, OnChanges, SimpleChanges, AfterContentInit,
-  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import {
+  Component, OnInit, Input, DoCheck, OnChanges, SimpleChanges, AfterContentInit,
+  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy
+} from '@angular/core';
 
 @Component({
   selector: 'app-block-item',
@@ -7,46 +9,46 @@ import { Component, OnInit, Input, DoCheck, OnChanges, SimpleChanges, AfterConte
   styleUrls: ['./block-item.component.css']
 })
 export class BlockItemComponent implements OnInit, DoCheck, OnChanges, AfterContentInit,
-AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
-  @Input() post: [{ title: string, post: string, author: string }];
+  AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+  @Input() post: { id: number, title: string, post: string, author: string };
   constructor() {
     console.log('constructor');
   }
 
-  DeleteItem = () => {
-    this.post = [null];
-  }
+  // DeleteItem = () => {
+  //   this.post = [null];
+  // }
 
-  ngOnInit() {
-    console.log('ngOnInit');
-  }
+  // ngOnInit() {
+  //   console.log('ngOnInit');
+  // }
 
-  ngDoCheck(): void {
-    console.log('ngDoCheck');
-  }
+  // ngDoCheck(): void {
+  //   console.log('ngDoCheck');
+  // }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges==>', changes);
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   console.log('ngOnChanges==>', changes);
+  // }
 
-  ngAfterContentInit() {
-    console.log('ngAfterContentInit==>');
-  }
+  // ngAfterContentInit() {
+  //   console.log('ngAfterContentInit==>');
+  // }
 
-  ngAfterContentChecked() {
-    console.log('ngAfterContentChecked');
-  }
+  // ngAfterContentChecked() {
+  //   console.log('ngAfterContentChecked');
+  // }
 
-  ngAfterViewInit() {
-    console.log('ngAfterViewInit==>');
-  }
+  // ngAfterViewInit() {
+  //   console.log('ngAfterViewInit==>');
+  // }
 
-  ngAfterViewChecked() {
-    console.log('ngAfterViewChecked');
-  }
+  // ngAfterViewChecked() {
+  //   console.log('ngAfterViewChecked');
+  // }
 
-  ngOnDestroy() {
-    console.log('ngAfterViewChecked');
-  }
+  // ngOnDestroy() {
+  //   console.log('ngAfterViewChecked');
+  // }
 
 }

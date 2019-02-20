@@ -1,13 +1,18 @@
-<app-blog-input (PostArray)="displayPostArray($event)"></app-blog-input>
-<app-add-post (OnAddPost)="updateList($event)"></app-add-post>
-<div *ngIf="reversPostArray !== null">
-  <p>Example#1</p>
-  <app-block-item (click)="DeleteItem(item)" *ngFor="let item of reversPostArray" [post]="item"></app-block-item>
-  <!-- <p>Example#2</p>
-  <app-block-item *ngFor="let item of reversPostArray" [post]="item">
-    <div class="alert alert-warning">
-      Post Added
-    </div>
-    <p class="alewrt alert-warning">{{item.post}}</p>
-  </app-block-item> -->
+<div class="container block-list-styles">
+  <app-blog-input (PostArray)="displayPostArray($event)"></app-blog-input>
+  <app-add-post (OnAddPost)="updateList($event)"></app-add-post>
+  <div *ngIf="reversPostArray !== null">
+    <p>Example#1</p>
+    <app-block-item *ngFor="let item of reversPostArray" [post]="item">
+      <p><input type="checkbox" value={{item.id}} class="checkForDelete">Delete Post</p>
+    </app-block-item>
+    <button (click)="DeletePost()" class="btn btn-warning">Delete Checked Posts</button>
+    <!-- <p>Example#2</p>
+    <app-block-item *ngFor="let item of reversPostArray" [post]="item">
+      <div class="alert alert-warning">
+        Post Added
+      </div>
+      <p class="alewrt alert-warning">{{item.post}}</p>
+    </app-block-item> -->
+  </div>
 </div>

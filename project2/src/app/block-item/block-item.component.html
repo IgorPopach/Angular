@@ -1,15 +1,21 @@
-<div>
-  <p>
-    id {{post.id}}
-  </p>
-  <p>
-    Title {{post.title}}
-  </p>
-  <p>
-    Post {{post.post}}
-  </p>
-  <p>
-    Author {{post.author}}
-  </p>
+<div class="row block-item-styles">
+  <div class="col-10">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-secondary">
+        id {{post.id}}
+      </li>
+      <li class="list-group-item list-group-item-secondary">
+        Title {{post.title}}
+      </li>
+      <li class="list-group-item list-group-item-secondary">
+        Post {{post.post}}
+      </li>
+      <li class="list-group-item list-group-item-secondary">
+        Author {{post.author}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-2 checkStyle">
+    <ng-Content></ng-Content>
+  </div>
 </div>
-<ng-Content></ng-Content>
