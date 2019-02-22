@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'project2';
-  arr = ['green', 24, 35, 4, 16, 58, 46];
+  arr = [1, 2, 3, 4, 16, 58, 46];
+  arrColor = ['yellow', 'orange', 'red', 'purple', 'blue', 'green', 'light-green'];
   active = 1;
-  BgColor = '#000';
+  BgColor = 'white';
 
   onClick(item: number) {
     this.active = item;
-    this.BgColor = item;
-    console.log('BgColor', this.BgColor);
+    this.BgColor = this.arrColor[item];
   }
 }
