@@ -2,5 +2,5 @@
   <h3>{{post.title}}</h3>
   <p>{{post.date}}</p>
   <p>{{post.post}}</p>
-  <a class="btn btn-info" [routerLink]="[post.id]">Read more</a>
+  <a class="btn btn-info" (click)="goBack()">Go Back</a>
 </li>

@@ -3,7 +3,10 @@
     <div class="col-12">
       <h1>blog works!</h1>
       <ul class="list-group">
-        <app-blog-post *ngFor="let item of posts" [post]="item"></app-blog-post>
+        <li *ngFor="let item of posts" class="list-group-item">
+          <h3>{{item.title}}</h3>
+          <a class="btn btn-info" [routerLink]="[item.id]">Read more</a>
+        </li>
       </ul>
     </div>
   </div>
