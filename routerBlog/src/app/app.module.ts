@@ -10,6 +10,7 @@ import { BlogComponent } from './blog/blog.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MessagesComponent } from './messages/messages.component';
     BlogComponent,
     BlogPostComponent,
     HomeComponent,
-    MessagesComponent
+    MessagesComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,

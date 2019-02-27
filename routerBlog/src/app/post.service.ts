@@ -10,15 +10,20 @@ import { MessageService } from './message.service';
   providedIn: 'root'
 })
 export class PostService {
-
+  postsStore: Post[] = Posts;
   constructor(private messageService: MessageService) { }
 
   getPosts(): Post[] {
-    return Posts
+    return this.postsStore
+  }
+
+  addPosts(post: Post): void {
+    this.postsStore.push(post);
+    this.messageService.add(`PostService: add post id=${post.id}`);
   }
 
   getPost(id: number): Observable<Post> {
     this.messageService.add(`PostService: fetched post id=${id}`);
-    return of(Posts.find(post => post.id === id));
+    return of(this.postsStore.find(post => post.id === id));
   }
 }
