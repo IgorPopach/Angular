@@ -1,13 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h1>blog works!</h1>
+      <h1>blog</h1>
       <ul class="list-group">
         <li *ngFor="let item of posts" class="list-group-item">
           <h3>{{item.title}}</h3>
           <a class="btn btn-info" [routerLink]="[item.id]">Read more</a>
+          <a class="btn btn-info" [routerLink]="['/blog', item.id, item.title, item.post]">Read more Ex2</a>
         </li>
       </ul>
     </div>
   </div>
+  <app-add-post></app-add-post>
 </div>
