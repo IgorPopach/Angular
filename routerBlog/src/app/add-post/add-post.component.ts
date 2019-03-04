@@ -16,16 +16,15 @@ export class AddPostComponent implements OnInit {
 
   ngOnInit() {
   }
-  
-  addPost():void {
+  addPost(): void {
     this.post = {
       id: Date.now(),
       date: new Date,
       title: this.inputTitle,
       post: this.inputPost
-    }
+    };
     this.postService.addPosts(this.post);
-    console.log('addPost', this.post)
+    console.log('addPost', this.post);
   }
 
 }

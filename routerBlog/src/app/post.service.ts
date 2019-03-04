@@ -14,7 +14,7 @@ export class PostService {
   constructor(private messageService: MessageService) { }
 
   getPosts(): Post[] {
-    return this.postsStore
+    return this.postsStore;
   }
 
   addPosts(post: Post): void {

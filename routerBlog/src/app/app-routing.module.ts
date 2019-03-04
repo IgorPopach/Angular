@@ -17,8 +17,8 @@ const routes: Routes = [
   {path: 'docs', component: DocsComponent},
   {path: 'resources', component: RecourcesComponent},
   {path: 'blog', component: BlogComponent},
-  // {path: 'blog/:id', component: BlogPostComponent},
-  {path: 'blog/:id/:title/:post', component: BlogSinglePostComponent},
+  {path: 'blog/:id', component: BlogPostComponent},
+  // {path: 'blog/:id/:title/:post', component: BlogSinglePostComponent},
   {path: '**', component: ErrorPageComponent}
 ];
 
