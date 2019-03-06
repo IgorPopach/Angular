@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { BlogSinglePostComponent } from './blog-single-post/blog-single-post.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { OpenWeatherMapComponent } from './open-weather-map/open-weather-map.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,14 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     MessagesComponent,
     AddPostComponent,
     BlogSinglePostComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    OpenWeatherMapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

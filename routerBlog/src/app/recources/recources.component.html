@@ -1,7 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      recources works!
+      <p>Private exchange rates</p>
+      <ul class="list-group">
+        <li *ngFor="let item of rates" class="list-group-item">
+          <strong>{{item.ccy}}/{{item.base_ccy}} </strong>
+          <strong>buy: {{item.buy}}/sale: {{item.sale}}</strong>
+        </li>
+      </ul>
     </div>
+    <app-open-weather-map></app-open-weather-map>
   </div>
 </div>
