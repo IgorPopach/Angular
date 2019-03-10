@@ -1,3 +1,18 @@
-<div>
-  <p>humidity: {{weatherData.main.humidity}}</p>
+<h2>Weather information</h2>
+<div class="row">
+  <div class="col-4">
+    <p>
+      Your current location: <strong>{{ currentCity }}</strong>
+    </p>
+    <input type="text" placeholder="city..." [(ngModel)]="InputCity" />
+    <button class="btn btn-info" (click)="showWeatherByCity()">Search</button>
+  </div>
+  <div class="col-8">
+    <fa name="{{weatherImg}}" size="2x"></fa>
+    <img src="http://openweathermap.org/img/w/{{weatherIcon}}.png" alt="111"/>
+    <ul class="list-group">
+      <li class="list-group-item">temperature: {{ temperarure }} &#8451;</li>
+      <li class="list-group-item">humidity: {{ weatherData.main.humidity }} %</li>
+    </ul>
+  </div>
 </div>

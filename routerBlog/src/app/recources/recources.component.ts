@@ -11,10 +11,12 @@ export class RecourcesComponent implements OnInit {
   constructor(public request: RequestService) { }
 
   ngOnInit() {
-    this.request.getData()
-      .subscribe((response: any) => {
-        this.rates = response;
-        console.log(this.rates);
-      });
+    setTimeout(() => {
+      this.request.getData()
+    .subscribe((response: any) => {
+      this.rates = response;
+      console.log(this.rates);
+    });
+    }, 500);
   }
 }
