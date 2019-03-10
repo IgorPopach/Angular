@@ -8,7 +8,7 @@
     <button class="btn btn-info" (click)="showWeatherByCity()">Search</button>
   </div>
   <div class="col-8">
-    <img src="http://openweathermap.org/img/w/{{weatherIcon}}.png" alt="111"/>
+    <img src="http://openweathermap.org/img/w/{{weatherIcon}}.png" alt="{{weatherIcon}}"/>
     <ul class="list-group">
       <li class="list-group-item">temperature: {{ temperarure }} &#8451;</li>
       <li class="list-group-item">humidity: {{ weatherData.main.humidity }} %</li>
