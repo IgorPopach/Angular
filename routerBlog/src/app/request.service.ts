@@ -32,7 +32,7 @@ export class RequestService {
       console.log('Unable to retrieve your location');
     }
     console.log('Locating…');
-    navigator.geolocation.getCurrentPosition(success.bind(this), error);
+    navigator.geolocation.getCurrentPosition(success, error);
   }
   getWeatherDataByCoord() {
     console.log('this.urlWeather', this.urlWeatherByCoord);
