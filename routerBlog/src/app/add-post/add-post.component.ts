@@ -14,15 +14,7 @@ export class AddPostComponent implements OnInit {
   inputTitle = '';
   inputPost = '';
   constructor(public postService: PostService, private dbManagerService: DbManagerService) { }
-  Response = response => {
-    const postData = response.response;
-    const dataKey = response.responseKeys;
-    console.log('postData', postData);
-    console.log('dataKey', typeof(dataKey));
-  }
   ngOnInit() {
-    this.dbManagerService.getData()
-      .subscribe(this.Response);
   }
 
   addPost(): void {
@@ -43,10 +35,8 @@ export class AddPostComponent implements OnInit {
       title: this.inputTitle,
       post: this.inputPost
     };
-    const data = [];
-    data.push(this.post);
-    console.log('data', data);
-    this.dbManagerService.saveData(data)
+    console.log('this.post', this.post);
+    this.dbManagerService.saveData(this.post)
       .subscribe(
         (response) => console.log(response),
         (error) => console.log(error)
