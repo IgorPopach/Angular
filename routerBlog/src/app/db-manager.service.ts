@@ -24,14 +24,14 @@ export class DbManagerService {
   getData() {
     return this.http.get(this.url).map((response: Response) => {
       console.log('response====>', response);
-      const respArr = [];
-      const TransformResponse = Object.keys(response).map((key) => {
-        console.log('response[key]', response[key]);
-        return respArr.concat(response[key]);
-      });
-      console.log('TransformResponse==>', TransformResponse);
-      const Response = {TransformResponse};
-      return Response;
+      // const respArr = [];
+      // const TransformResponse = Object.keys(response).map((key) => {
+      //   console.log('response[key]', response[key]);
+      //   return respArr.concat(response[key]);
+      // });
+      // console.log('TransformResponse==>', TransformResponse);
+      // const Response = {TransformResponse};
+      return response;
     });
   }
 

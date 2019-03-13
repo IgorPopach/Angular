@@ -15,9 +15,10 @@
         <h2>Posts from DB</h2>
         <ul class="list-group">
           <li *ngFor="let item of dbPosts" class="list-group-item">
-            <h3>{{item[0].title}}</h3>
-            <a class="btn btn-info" [routerLink]="[item[0].id]">Read more</a>
-            <a class="btn btn-info" [routerLink]="['/blog', item[0].id, item[0].title, item[0].post]">Read more Ex2</a>
+            <h3>{{item.title}}</h3>
+            <a class="btn btn-info" [routerLink]="[item.id]">Read more</a>
+            <a class="btn btn-info" [routerLink]="['/blog', item.id, item.title, item.post]">Read more Ex2</a>
+            <button class="btn btn-info" (click)="deletePost(item.key)">Delete Post</button>
           </li>
         </ul>
       </div>
