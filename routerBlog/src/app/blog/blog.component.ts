@@ -35,7 +35,7 @@ export class BlogComponent implements OnInit {
   }
 
   deletePost(key) {
-
+    //TODO delete from firebase....
   }
 
   ngOnInit() {
