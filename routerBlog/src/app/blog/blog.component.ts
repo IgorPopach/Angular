@@ -21,26 +21,25 @@ export class BlogComponent implements OnInit {
   }
 
   Response = response => {
-    console.log('response', response);
     const respArr = [];
     const TransformResponse = Object.keys(response).map((key) => {
-        console.log('response[key]', response[key]);
         response[key].key = key;
         respArr.push(response[key]);
         return respArr;
       });
-      console.log('TransformResponse==>', TransformResponse[0]);
     this.dbPosts = TransformResponse[0];
     console.log('this.dbPosts', this.dbPosts);
   }
 
   deletePost(key) {
-    //TODO delete from firebase....
+    console.log('key', typeof(key));
+    this.dbManagerService.deleteData(key)
+      .subscribe(() => (alert(`Post with key: ${key} deleted!`)));
   }
 
   ngOnInit() {
     this.getPosts();
-    setTimeout(() => {
+    setInterval(() => {
       return this.dbManagerService.getData()
       .subscribe(this.Response);
     }, 1000);
