@@ -39,7 +39,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
     this.getPosts();
-    setInterval(() => {
+    setTimeout(() => {
       return this.dbManagerService.getData()
       .subscribe(this.Response);
     }, 1000);

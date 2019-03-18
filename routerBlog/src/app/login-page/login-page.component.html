@@ -1,0 +1,21 @@
+<div class="container">
+  <form (ngSubmit)="submitForm(Form)" #Form="ngForm">
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="text" class="form-control" placeholder="Enter email" name="email" ngModel required email #email="ngModel">
+      <p *ngIf="email.invalid && email.touched" class="alert alert-danger">Invalid input</p>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="text" class="form-control" placeholder="Password" name="password" ngModel required minlength="6" maxlength="10">
+      <p *ngIf="password.invalid && password.touched" class="alert alert-danger">Invalid input</p>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!Form.valid">Submit</button>
+  </form>
+  <select type="text">
+    <option value="black">black</option>
+    <option value="green">green</option>
+    <option value="yellow" [defaultSelected]="true" >yellow</option>
+    <option value="blue">blue</option>
+  </select>
+</div>

@@ -18,6 +18,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { BlogSinglePostComponent } from './blog-single-post/blog-single-post.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { OpenWeatherMapComponent } from './open-weather-map/open-weather-map.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { OpenWeatherMapComponent } from './open-weather-map/open-weather-map.com
     AddPostComponent,
     BlogSinglePostComponent,
     ErrorPageComponent,
-    OpenWeatherMapComponent
+    OpenWeatherMapComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

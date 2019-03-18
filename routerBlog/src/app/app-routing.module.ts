@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogSinglePostComponent } from './blog-single-post/blog-single-post.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'resources', component: RecourcesComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'blog/:id', component: BlogPostComponent},
+  {path: 'login', component: LoginPageComponent},
   // {path: 'blog/:id/:title/:post', component: BlogSinglePostComponent},
   {path: '**', component: ErrorPageComponent}
 ];
