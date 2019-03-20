@@ -10,6 +10,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogSinglePostComponent } from './blog-single-post/blog-single-post.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginPageReactComponent } from './login-page-react/login-page-react.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'blog', component: BlogComponent},
   {path: 'blog/:id', component: BlogPostComponent},
   {path: 'login', component: LoginPageComponent},
+  {path: 'login-reactive', component: LoginPageReactComponent},
   // {path: 'blog/:id/:title/:post', component: BlogSinglePostComponent},
   {path: '**', component: ErrorPageComponent}
 ];

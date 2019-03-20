@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -10,11 +10,20 @@ export class LoginPageComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild('Form') Form: NgForm;
+
   ngOnInit() {
   }
 
   submitForm(Form: NgForm) {
     console.log(Form);
+  }
+
+  load() {
+    const loadForm = 'test@example.com';
+    this.Form.form.patchValue({
+      email: loadForm,
+    })
   }
 
 }

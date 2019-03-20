@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -19,6 +20,7 @@ import { BlogSinglePostComponent } from './blog-single-post/blog-single-post.com
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { OpenWeatherMapComponent } from './open-weather-map/open-weather-map.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { LoginPageReactComponent } from './login-page-react/login-page-react.component';
 
 @NgModule({
   declarations: [
@@ -34,14 +36,16 @@ import { LoginPageComponent } from './login-page/login-page.component';
     BlogSinglePostComponent,
     ErrorPageComponent,
     OpenWeatherMapComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    LoginPageReactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
