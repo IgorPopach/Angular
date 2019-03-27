@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Post } from './../post';
-import { PostService } from './../post.service';
-import { DbManagerService } from './../db-manager.service';
+import { Post } from './../../post';
+import { PostService } from './../../post.service';
+import { DbManagerService } from './../../db-manager.service';
 
 @Component({
   selector: 'app-add-post',
